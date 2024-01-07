@@ -3,3 +3,8 @@ spring:
     name: api-gateway
   config:
     import: "optional:configserver:http://localhost:8100/"
+#redis: # set if default info is not used
+#  host: http://localhost:6379
+#  port: 6379
+#  username: username
+#  password: password
