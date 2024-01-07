@@ -37,9 +37,9 @@ class Book(
 )
 
 fun getAllBooksMap(): Map<String, Book> = mapOf(
-    "325dac11" to Book("325dac11", "Harry Potter2"),
-    "a1447057" to Book("a1447057", "Spring in Action2"),
-    "4d48c52d" to Book("4d48c52d", "The great expectation2"),
-    "5b3d68d7" to Book("5b3d68d7", "The Wind Rises2")
+    "325dac11" to Book("325dac11", "Harry Potter"),
+    "a1447057" to Book("a1447057", "Spring in Action"),
+    "4d48c52d" to Book("4d48c52d", "The great expectation"),
+    "5b3d68d7" to Book("5b3d68d7", "The Wind Rises")
 
 )

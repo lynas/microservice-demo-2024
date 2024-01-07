@@ -3,7 +3,23 @@ spring:
     name: book-service
   config:
     import: "optional:configserver:http://localhost:8100/"
+#    import: "optional:configserver:http://192.168.178.23:8100/"
 management:
   tracing:
     sampling:
       probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411
+#      endpoint: http://192.168.178.23:9411
+
+eureka:
+  # Needed only when running from docker locally linux os {start}
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: 172.20.64.1 # docker container ip
+  # Needed only when running from docker locally linux os {end}
+  client:
+    service-url:
+#      defaultZone: "http://192.168.178.23:8000/eureka"
+      defaultZone: "http://localhost:8000/eureka"
