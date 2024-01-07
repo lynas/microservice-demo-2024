@@ -5,6 +5,7 @@ import org.springframework.boot.runApplication
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 
@@ -17,14 +18,15 @@ fun main(args: Array<String>) {
 }
 
 @RestController
+@RequestMapping("/books")
 class BookRestController{
 
-    @GetMapping("/books")
+    @GetMapping("/")
     fun getAllBooks(): Map<String, Book> {
         return getAllBooksMap()
     }
 
-    @GetMapping("/books/{id}")
+    @GetMapping("/{id}")
     fun getOneBook(@PathVariable id: String) = getAllBooksMap()[id]
 }
 
